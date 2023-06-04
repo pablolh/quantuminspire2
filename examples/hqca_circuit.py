@@ -3,7 +3,7 @@ from typing import Any, Dict, List
 from quantuminspire.sdk.models.circuit import Circuit
 
 
-def generate_circuit() -> str:
+def generate_circuit() -> Dict[str, Any]:
     with Circuit(platform_name="spin-2", program_name="prgm1") as circuit:
         kernel = circuit.init_kernel("new_kernel", 2)
         kernel.hadamard(0)
